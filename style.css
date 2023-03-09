@@ -1,0 +1,474 @@
+.whole-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    
+}
+
+/*  FIRST BLOCK */
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.header-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* display: grid;
+    grid-template-columns: 4fr 1fr; */
+}
+
+.headerLogo {
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgb(17, 77, 17);
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-wrap {
+    /* border: 1px solid rgb(17, 77, 17); */
+    display: flex;
+}
+
+.navLink {
+    margin: 10px 10px 0px 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.navLink:hover {
+    color: rgb(0, 192, 35);
+}
+
+.back {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 630px;
+    padding-top: 100px;
+    background: url(./image/back1.png) no-repeat fixed center; background-size: cover;  
+}
+
+.back-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.back-title {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+    color: rgb(211, 0, 0);
+}
+
+.author {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+/* BURGER MENU */
+
+.hamb {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    
+}
+
+.menu > li > a {
+    padding-left: 30px;
+}
+
+.popup {
+    display: none;
+}
+
+@media screen and (max-width: 640px) {
+    .menu {
+        display: none;
+    }
+    .hamb {
+        display: flex;
+        align-items: center;
+    }
+    .hamb-field {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: rgb(17, 77, 17);
+        transition: 0.2s;
+    }
+    .popup {
+        position: fixed;
+        top: 72px;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(144, 223, 147);
+        z-index: 100;
+        transition: 0.3s;
+        display: flex;
+    }
+    .popup.open {
+        right: 0;
+    }
+    .popup .menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 50px 0;
+    }
+    .popup .menu > li {
+        width: 100%;
+    }
+    .popup .menu > li > a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        font-size: 20px;
+    }
+    body.noscroll {
+        overflow: hidden;
+    }
+    .header {     
+        border: solid 1px green;
+    }
+}
+/*//////////////////////////////////*/
+
+
+/*  SECOND BLOCK */
+
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.mainText {
+    background: linear-gradient(100deg, rgb(247, 225, 102), rgb(168, 248, 94)); 
+}
+
+.second-title {
+    text-align: center;
+    padding-top: 80px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: rgb(31, 169, 42);    
+}
+
+.our-mission {
+    /* padding: 30px 140px 100px 140px; */
+    padding: 30px;
+    font-size: 23px;
+    text-align: justify;
+    line-height: 40px; 
+}
+
+@media screen and (min-width: 900px) {
+    .our-mission {
+        padding: 30px 140px 100px 140px
+    }
+}
+
+/*  THIRD BLOCK */
+
+.card-wrapper {
+    margin: 20px;
+    
+}
+  
+.dog-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    margin: 0 10px 0 10px;
+}
+  
+.card1 img {
+    width: 270px;
+    height: 350px;
+    object-fit: cover; 
+}
+  
+.card1 { 
+    background-color: rgb(250, 164, 250);
+    width: 270px;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}   
+
+.card-name {
+    font-size: 25px;
+    text-align: center;
+    color: rgb(255, 0, 242);  
+}
+
+.card-breed {
+    font-size: 20px;
+    text-align: center;
+    color: rgb(10, 186, 255);
+}
+
+.card-about { 
+    font-size: 18px;
+    text-align: justify;
+    padding-top: 15px;
+    word-spacing: 2px;
+    color: rgb(34, 10, 255);
+    line-height: 24px;
+    
+}
+
+/* FOURTH BLOCK */
+
+.therapy-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;  
+}
+
+.therapy-title {
+    color: blueviolet;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    text-decoration-line: overline;  
+}
+
+.wrap-gallery {
+    border: rgb(180, 89, 192) solid 1px;
+    margin: 20px 0 20px 0;  
+    max-width: 80%;
+    box-shadow: 4px 4px 4px 0.5px rgba(3, 9, 169, 0.775);
+}
+
+.gallery,
+.gallery-reverse {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;  
+    justify-content: center; 
+    background-color: rgb(213, 191, 247);
+}
+
+.photo1, .photo2, .photo3, .photo4  {
+     border: 1px solid rgb(86, 7, 122); 
+    width: 80%;
+}
+
+.aboutCanis {
+    text-align: justify;
+    font-size: 18px;
+    color: rgb(86, 7, 122);
+    padding: 40px;
+    line-height: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media screen and (max-width: 860px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .gallery-reverse {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+}
+
+/* FIVTH BLOCK */
+
+hr {
+    margin-top: 0px;
+}
+
+.contact-wrapper {
+    margin: 60px auto;
+    color: black;
+    line-height: 40px;
+  
+}
+
+.contact-form h1, p {
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contact-form h1 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+form {
+    margin-top: 60px;
+}
+
+input {
+    width: 340px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #999999;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.ques {
+   color: rgb(66, 76, 209);
+   font-size: 24px;
+   animation: blink 2.5s infinite; /* Параметры анимации */ 
+}
+   @keyframes blink {
+    from { opacity: 0.1; /* Непрозрачный текст */ }
+    to { opacity: 1; /* Прозрачный текст */ }
+   }
+
+.ques-back {
+    background-color: rgb(255, 255, 255);
+}
+
+input, label {
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+}
+
+.button-block {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 165px;
+    height: 40px;
+    background: rgb(254, 255, 254);
+    color: rgb(0, 0, 0);
+    margin-right: 0px; 
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(80, 66, 209);
+}
+
+.wrap-input span {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    color: rgb(187, 21, 21);
+}
+
+#submit-error {
+    color: rgb(187, 21, 21);
+    margin-bottom: 50px;
+}
+
+.container#part4 {
+    background-color: rgb(175, 123, 223);
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 670px;
+    padding-top: 40px;
+ 
+} 
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: rgb(255, 80, 240);
+    color: rgb(20, 33, 220);
+    font-weight: bold;
+    font-family: cursive;
+    word-spacing: 5px;
+}
+.heart {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: crimson;
+}
+
+
+/* Media requests */
+
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+@media screen and (max-width:990px) {
+    .container {
+        max-width: 780px;
+    }
+}
+@media screen and (max-width:760px) {
+    .container {
+        max-width: 600px;
+    }
+} 
+@media screen and (max-width:600px) {
+    .container {
+        max-width: 480px;
+    }
+} 
+@media screen and (max-width:500px) {
+    .container {
+        max-width: 350px;
+    }
+} 
